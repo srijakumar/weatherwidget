@@ -1,49 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <body>
     <head>
-
-        <script src="http://code.jquery.com/jquery-1.7.2.min.js">
-        var API = 'http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2222102%22&format=json'
-
-
-jQuery.getJSON(API, null, function(data) {
-  var forecast = data.query.results.channel.item.forecast;
-  for (i = 0; i < forecast.length; i++) { 
-    console.log(forecast[i]);
-  }
-})
-
-        var weather = [<!bring in the array from the url??>]
-
-        var text = "";
-
-
-        for (var i=0;i<2;i++){
-            list: {
-                text += weather[i] + "<br>";
-                } 
-
-
-
-
-
-
-
-
-
-                        item = r.query.results.channel.item.forecast[i];
-                        addWeather(
-                            item.code,
-                            item.day +' <b>'+item.date.replace('\d+$','')+'</b>',
-                            item.text + ' <b>'+item.low+' / '+item.high+'</b>'
-                        );
-
-
-
-
-        </script>
-    
     </head>
+
+    <body>
+
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"> </script>
+        <script src="WeatherWJS.js"></script>
+    
     </body>
 </html>
