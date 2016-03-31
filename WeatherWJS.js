@@ -15,9 +15,9 @@ $(document).ready(function() {
         $("body").append(HTML)
 
     }
-    var API = 'http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2222102%22&format=json'
+    var API = 'http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=2502265&format=json';
     jQuery.getJSON(API, null, function(data) {
-
+        console.log(data);
         var forecast = data.query.results.channel.item.forecast;
         for (i = 0; i < forecast.length; i++) { 
             addWeather(forecast[i]);
