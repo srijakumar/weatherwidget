@@ -18,7 +18,7 @@ $(document).ready(function() {
          var day = '<tr>';
          var text = '<tr>';
          var low = '<tr>';
-         var high = '<tr>';
+         //var high = '<tr>';
 
 
         for (i = 0; i < forecast.length; i++) {
@@ -28,8 +28,8 @@ $(document).ready(function() {
             date += '<td>'+item.date+'</td>';
             day += '<td>'+item.day+'</td>';
             text += '<td>'+item.text+'</td>';
-            low += '<td>'+item.low+'</td>';
-            high += '<td>'+item.high+'</td>';
+            low += '<td>'+item.low+'/'+item.high+'</td>';
+            //high += '<td>'+item.high+'</td>';
         }
 
         // for each item property string add a </tr> tag
@@ -37,10 +37,10 @@ $(document).ready(function() {
         day += '</tr>';
         text += '</tr>';
         low += '</tr>';
-        high += '</tr>';
+        //high += '</tr>';
 
         // add each item property string to the main html string variable
-        html += date+day+text+low+high;
+        html += date+day+text+low;
 
         // close out the table by adding </table> to the main html string variable
         html += '</table>';
